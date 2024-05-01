@@ -45,7 +45,7 @@
   
         <div class="flex justify-between items-center py-4 px-6 text-sm bg-black-200 rounded-xl mt-6">
           <div class="flex gap-4 items-center">
-            <img src="../../assets/menu-icon.svg" alt="">
+            <truck-icon color="white" />
     
             <div class="flex flex-col gap-1">
               <p class="text-white">Entrega via <span class="font-bold">Juzo's</span></p>
@@ -73,7 +73,7 @@
           Avaliações dos usuários
         </h4>
 
-        <app-filter-button 
+        <app-select 
           label="Classificar por" 
           v-model="filter" 
           :options="filtersList"
@@ -84,7 +84,7 @@
         <app-rating-details />
 
         <div class="w-full flex flex-col gap-2">
-          <app-comment
+          <app-review
             v-for="_ in 4"
           />
         </div>
@@ -100,8 +100,10 @@ import AppRatingDetails from '../../components/AppRatingDetails.vue';
 import AppDisccountBadge from '../../components/AppDisccountBadge.vue';
 import AppButton from '../../components/AppButton.vue';
 import AppCounter from '../../components/AppCounter.vue';
-import AppComment from '../../components/AppComment.vue';
-import AppFilterButton from '../../components/AppFilterButton.vue';
+import AppReview from '../../components/AppReview.vue';
+import AppSelect from '../../components/AppSelect.vue';
+
+import { Truck as truckIcon} from 'lucide-vue-next'
 
 import { ref } from 'vue'
 

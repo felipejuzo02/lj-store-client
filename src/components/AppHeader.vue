@@ -1,9 +1,7 @@
 <template>
   <header>
     <div class="flex justify-between items-center pb-8">
-      <button @click="toggleDrawer" class="border-[1px] border-gray-600 cursor-pointer rounded-md p-2 flex items-center md:hidden">
-        <img src="../assets/menu-icon.svg" alt="Icone do menu">
-      </button>
+      <app-icon-button icon="Menu" @click="toggleDrawer" class="md:hidden" />
       
       <h1 class="text-white cursor-pointer" @click="$router.push({ name: 'Home'})" >
         LOGO
@@ -14,15 +12,11 @@
         
         <!-- TODO: adicionar minha conta aqui -->
 
-        <button @click="$router.push({ name: 'MyCart' })" class="border-[1px] border-gray-600 cursor-pointer rounded-md p-2 flex items-center">
-          <img src="../assets/shopping-cart-icon.svg" alt="Icone do carrinho">
-        </button>
+        <app-icon-button icon="ShoppingCart"  @click="router.push({ name: 'MyCart' })" />
       </div>
   
       <div class="fixed h-screen bg-black-200 bottom-0 py-8 duration-300 right-0 z-50" :class="drawerClasses">
-        <button @click="toggleDrawer" class="border-[1px] border-gray-600 cursor-pointer rounded-md p-2 flex items-center">
-          <img src="../assets/close.svg" alt="Icone fechar menu">
-        </button>
+        <app-icon-button icon="X"  @click="toggleDrawer" />
   
         <div class="flex flex-col items-center text-white" :class="navClasses">
           <nav class="flex flex-col items-center gap-6 mt-8">
@@ -50,9 +44,10 @@
 
 <script setup>
 import AppSearchInput from './AppSearchInput.vue';
+import AppIconButton from './AppIconButton.vue';
 
 import { ref, computed, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 defineOptions({
   name: 'AppHeader'
@@ -62,6 +57,7 @@ const oppenedDrawer = ref(false)
 const search = ref('')
 
 const route = useRoute()
+const router = useRouter()
 
 watch (route, () => oppenedDrawer.value && toggleDrawer())
 

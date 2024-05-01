@@ -1,6 +1,6 @@
 <template>
   <section class="px-8 mt-8">
-    <app-filter-button 
+    <app-select
       label="Filtrar por:" 
       v-model="category" 
       :options="categoryList"
@@ -19,7 +19,7 @@
 import { onMounted, computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
-import AppFilterButton from '../../components/AppFilterButton.vue';
+import AppSelect from '../../components/AppSelect.vue';
 import AppProductCard from '../../components/AppProductCard.vue';
 
 defineOptions({

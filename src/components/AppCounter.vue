@@ -1,24 +1,17 @@
 <template>
   <div class="flex items-center gap-4">
-    <button 
-      class="border border-gray-700 h-8 w-8 rounded-md flex items-center justify-center hover:bg-black-200 duration-200"
-      @click="decrementModel"
-    >
-      <img src="../assets/left-icon.svg" alt="Icone seta esquerda">
-    </button>
-    
+    <app-icon-button icon="ChevronLeft" @click="decrementModel" />
+
     <p class="w-5 text-center">{{ model }}</p>
-    
-    <button 
-      class="border border-gray-700 h-8 w-8 rounded-md flex items-center justify-center hover:bg-black-200 duration-200"
-      @click="incrementModel"
-    >
-      <img src="../assets/right.svg" alt="Icone seta direita">
-    </button>
+
+    <app-icon-button icon="ChevronRight" @click="incrementModel" />
   </div>
 </template>
 
 <script setup>
+import AppIconButton from './AppIconButton.vue';
+import { toast } from 'vue3-toastify';
+
 defineOptions({
   name: 'AppCounter'
 })
@@ -27,6 +20,8 @@ const model = defineModel()
 
 function incrementModel () {
   model.value = model.value + 1
+
+  toast.success('Wow so easy!');
 }
 
 function decrementModel () {
