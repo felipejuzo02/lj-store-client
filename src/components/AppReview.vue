@@ -30,13 +30,9 @@
       <p>Classifique essa avaliação:</p>
 
       <div class="flex gap-2">
-        <button @click="toggleDrawer" class="border-[1px] border-gray-600 cursor-pointer rounded-md p-2 flex items-center">
-          <img src="../assets/close.svg" alt="Icone fechar menu">
-        </button>
-  
-        <button @click="toggleDrawer" class="border-[1px] border-gray-600 cursor-pointer rounded-md p-2 flex items-center">
-          <img src="../assets/close.svg" alt="Icone fechar menu">
-        </button>
+        <app-icon-button icon="ThumbsUp" @click="markPositiveReview" />
+
+        <app-icon-button icon="ThumbsDown" @click="markNegativeReview" />
       </div>
     </div>
   </div>
@@ -44,6 +40,15 @@
 
 <script setup>
 import AppRating from './AppRating.vue';
+import AppIconButton from './AppIconButton.vue';
 
 defineOptions({ name: 'AppComment' })
+
+function markPositiveReview () {
+  console.log('Positivo')
+}
+
+function markNegativeReview () {
+  console.log('Positivo')
+}
 </script>
