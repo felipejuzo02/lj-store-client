@@ -1,5 +1,5 @@
 <template>
-  <details class="app-details border border-black-200 rounded-lg">
+  <details class="app-details border border-black-200 rounded-lg text-white">
     <summary class="flex p-4 justify-between items-center cursor-pointer hover:bg-black-200">
       <div>
         <p class="font-bold">Número do pedido</p>

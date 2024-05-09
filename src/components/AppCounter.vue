@@ -25,7 +25,7 @@ function incrementModel () {
 }
 
 function decrementModel () {
-  if (model.value === 1) return
+  if (model.value <= 1) return
 
   model.value = model.value - 1
 }

@@ -12,7 +12,7 @@
       </button>
     </section>
 
-    <section class="text-white mt-6">
+    <section class="mt-6">
       <div
         v-for="(item, index) in props.sections"
         :key="index"
@@ -41,7 +41,7 @@ const props = defineProps({
 })
 
 onMounted (() => {
-  active.value = props.sections[2].id
+  active.value = props.sections[1].id
 })
 
 const active = ref()

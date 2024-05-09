@@ -13,8 +13,6 @@
       </div>
     </div>
 
-
-
     <ul class="bg-white text-sm rounded-md mt-0.5 py-2 max-w-full flex-col gap-2 absolute w-full shadow-md" :class="optionsClasses">
       <li
         v-for="(item, index) in options"

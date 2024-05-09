@@ -42,16 +42,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
 import AppProductCardSmall from '../../components/AppProductCardSmall.vue';
 import AppButton from '../../components/AppButton.vue';
+
+import { ref } from 'vue'
 
 defineOptions({
   name: 'Chekckout'
 })
 
-const counter = ref(0) // TODO: setar model
+const counter = ref(0)
 
 const emits = defineEmits(['removeItem'])
 </script>

@@ -10,7 +10,7 @@
       </router-view>
     </div>
     
-    <div class="w-full bg-gray-700 h-[0.5px] mt-4"></div>
+    <div class="w-full bg-gray-700 h-[0.5px] mt-4 hidden md:block"></div>
 
     <footer class="text-gray-400 text-center text-sm p-8 hidden md:block">
       Desenvolvido por Luis Juzo :)

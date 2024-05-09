@@ -18,9 +18,7 @@
     >
 
     <div class="bg-gray-700 absolute w-16 h-16 rounded-full flex items-center justify-center z-50 opacity-0 duration-200">
-      <p class="text-white font-bold">
-        IC
-      </p>
+     <camera-icon color="white"></camera-icon>
       
       <p class="absolute bottom-[-34px] text-center text-white text-xs bg-black-200 px-2 py-1 rounded-md">Alterar</p>
     </div>
@@ -28,6 +26,7 @@
 </template>
 
 <script setup>
+import { Camera as cameraIcon } from 'lucide-vue-next';
 import { ref } from 'vue';
 
 defineOptions({
